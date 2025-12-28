@@ -117,12 +117,67 @@ accelerate launch \
 
 ---
 
-## 8. Important note (distributed evaluation)
+## 8. Dataset organization
+
+Dataset used to train and evalute the proposed method is https://github.com/Darwen9/CKMImagenet
+The dataset is divided into *Gain* and *AoA*, and then split into **train / eval**.  
+The training and test sets are collected from **non-overlapping physical regions**.
+For the Gain and AoA datasets, samples must be generated from the **same physical region** and the **same base-station  configuration and position**.
+
+
+---
+
+### 1) CKM Gain dataset (`CKM_gain_128`)
+
+Example:
+
+```text
+D:\data\CKM_gain_128
+├─ train
+│  ├─ BJ_image_128
+│  ├─ BJ1_image_128
+│  ├─ BJ2_image_128
+│  ├─ BJ2_1_image_128
+│  ├─ BJ2_2_image_128
+│  ├─ ...
+└─ eval
+   └─ NJ5_image_128
+```
+
+- `train/`: training scenes.
+- `eval/`: evaluation scenes.
+
+---
+
+### 2) CKM AoA dataset (`CKM_AoA_128`)
+
+Example:
+
+```text
+D:\data\CKM_AoA_128
+├─ train
+│  ├─ BJ_image_128_AoA
+│  ├─ BJ1_image_128_AoA
+│  ├─ BJ2_1_image_128_AoA
+│  ├─ BJ2_2_image_128_AoA
+│  ├─ ...
+└─ eval
+   └─ NJ5_image_128_AoA
+```
+
+- The structure must be the same as the Gain dataset, except each scene folder uses the `_AoA` suffix.
+
+---
+
+## 9. Important note (distributed evaluation)
 
 NOTE: The number of test samples must be a **common multiple** of the test batch size and the number of processes (--num_processes); otherwise, distributed evaluation may result in an incomplete final batch, mismatched sample counts across ranks, or runtime errors.
 
 ---
 
-## 9. Citation / Reference
+## 10. Citation / Reference
 
+This code is based on:
+- https://github.com/DPS2022/diffusion-posterior-sampling
+- https://github.com/yang-song/score_sde_pytorch
 If you use this codebase in academic work, please cite the related paper(s) accordingly.
