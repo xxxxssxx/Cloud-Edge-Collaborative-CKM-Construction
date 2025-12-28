@@ -119,9 +119,12 @@ accelerate launch \
 
 ## 8. Dataset organization
 
-Dataset used to train and evalute the proposed method is https://github.com/Darwen9/CKMImagenet .
+Dataset used to train and evalute the proposed method is https://github.com/Darwen9/CKMImagenet 
+
 The dataset is divided into *Gain* and *AoA*, and then split into **train / eval**.  
+
 The training and test sets are collected from **non-overlapping physical regions**.
+
 For the Gain and AoA datasets, samples must be generated from the **same physical region** and the **same base-station  configuration and position**.
 
 
