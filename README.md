@@ -1,4 +1,4 @@
-# Cloud–Edge Collaborative Multi–Task CKM Construction
+# Cloud–Edge Collaborative CKM Construction
 
 This repository provides:
 
