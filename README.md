@@ -3,7 +3,7 @@
 This repository provides:
 
 - **A foundation score-based model** trained on **unpaired** CKM data (e.g., gain + AoA-sin) to learn a reusable CKM prior.
-- combine the foundation score-based model with **Plug-and-play diffusion posterior sampling (DPS)** for multi-task CKM construction under sparse / noisy / irregular observations using **VP** and **VE** SDE.
+- Combine the foundation score-based model with **Plug-and-play diffusion posterior sampling (DPS)** for multi-configuration CKM construction under noisy / irregular observations using **VP** and **VE** SDE.
 - **End-to-end baselines** for supervised comparison, along with **MSE evaluation + visualization** scripts.
 
 All training experiments are conducted using 8 Ascend 910B NPUs.
