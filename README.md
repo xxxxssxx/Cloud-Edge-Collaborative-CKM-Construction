@@ -8,6 +8,7 @@ This repository provides:
 
 All training experiments are conducted using 8 Ascend 910B NPUs.
 
+Paper: https://arxiv.org/pdf/2602.07586
 ---
 
 ## 1. Environment
